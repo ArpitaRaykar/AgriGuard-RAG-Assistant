@@ -135,7 +135,7 @@ The response is returned and displayed in the chatbot interface.
 * React Markdown: Used to render markdown responses from the LLM (which formats crop diagnoses with headers, lists, and bold text).
   
    ## 3. Styling
-Vanilla CSS: Global styling and UI design are handled directly in index.css
+   Vanilla CSS: Global styling and UI design are handled directly in index.css
 
 ### Backend
 
@@ -164,7 +164,7 @@ PyPDF: Used to parse agricultural PDF documents.
 
 python-dotenv: Manages configuration and secrets (like GEMINI_API_KEY) from the environment.
 ### AI & RAG
-The AI & RAG (Retrieval-Augmented Generation) pipeline is implemented in rag_pipeline.py using LangChain:
+The AI & RAG (Retrieval-Augmented Generation) pipeline is implemented in rag_pipeline.py using LangChain.
 
  ## 1. Document Ingestion & Processing
 Data Source: PDF documents (research papers, manuals, reports) stored in the data/pdf's/ directory.
@@ -187,9 +187,9 @@ AI Model (LLM): gemini-3.5-flash (via Google Generative AI API) is used to synth
 * Prevention
 * Management/Treatment
 * Source (Document & Page Number)
-• Sentence Transformers (all-MiniLM-L6-v2)
-• ChromaDB
-• FlashRank
+
+  
+## 6. Additional Tools
 
 Document Processing:
 • PyPDF
@@ -199,6 +199,8 @@ Development Tools:
 • Git
 • GitHub
 
+Version Control:
+• GitHub Repository
 ---
 
 ## 📂 Project Structure
@@ -206,20 +208,27 @@ Development Tools:
 ```bash
 AgriGuard-RAG-Assistant/
 │
-├── public/
-├── src/
-│   ├── components/
-│   ├── services/
-│   ├── pages/
-│   ├── App.jsx
-│   └── main.jsx
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── services/
+│   │   ├── pages/
+│   │   ├── App.jsx
+│   │   └── main.jsx
 │
+├── backend/
+│   ├── app.py
+│   ├── rag_pipeline.py
+│   ├── ingest.py
+│   ├── data/
+│   │   └── pdfs/
+│   └── faiss_index/
+│
+├── requirements.txt
 ├── package.json
-├── package-lock.json
-├── vite.config.js
 ├── README.md
 └── .gitignore
-```
 
 ---
 
@@ -293,9 +302,8 @@ The presentation video includes:
 
 ## 👨‍💻 Author
 
-**Name:** ARPITA UTTAM KUMAR RAYKAR
+ ARPITA UTTAM KUMAR RAYKAR- MSc Data Science 
 
-**Register Number:** 25PG00013
 
 ---
 
