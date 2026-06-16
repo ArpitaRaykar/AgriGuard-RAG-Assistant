@@ -126,7 +126,7 @@ The response is returned and displayed in the chatbot interface.
 * React: The core UI library.
 * Vite: The build tool and development server.
 
-   #### 2. Dependencies
+    #### 2. Dependencies
 
 * Axios: Used for making HTTP requests to the FastAPI backend (e.g., querying the RAG pipeline and triggering document ingestion).
 
@@ -139,13 +139,13 @@ The response is returned and displayed in the chatbot interface.
 
 ### Backend
 
-#### 1. Core API & Server:
+  #### 1. Core API & Server:
 
 FastAPI: Web framework used for building the API endpoints (/ingest and /query).
 
 Uvicorn: ASGI server used to run the FastAPI application.
 
-#### 2. Retrieval-Augmented Generation (RAG) Framework:
+  #### 2. Retrieval-Augmented Generation (RAG) Framework:
    
 LangChain:
  (langchain, langchain-community, langchain-text-splitters, langchain-google-genai): Used to orchestrate the RAG pipeline, load PDFs, split text into chunks, and query the models.
@@ -181,11 +181,11 @@ Vector Store: FAISS (Facebook AI Similarity Search). The generated embeddings ar
 
  #### 3. Retrieval & AI Generation
    
-* Retrieval: When a query is submitted, the FAISS vector store retrieves the top k = 5 most similar text chunks based on cosine similarity.
-* AI Model (LLM): gemini-3.5-flash (via Google Generative AI API) is used to synthesize responses.
+  Retrieval: When a query is submitted, the FAISS vector store retrieves the top k = 5 most similar text chunks based on cosine similarity.
+  AI Model (LLM): gemini-3.5-flash (via Google Generative AI API) is used to synthesize responses.
 
-* Contextual Prompting: A custom system prompt directs the LLM to behave as an expert "Agricultural Disease Assistant.
-*  It requires the LLM to prioritize the retrieved context, incorporate conversation history, and format its response with specific sections:
+ Contextual Prompting: A custom system prompt directs the LLM to behave as an expert "Agricultural Disease Assistant.
+  It requires the LLM to prioritize the retrieved context, incorporate conversation history, and format its response with specific sections:
   
 * Crop
 * Disease/Pest
