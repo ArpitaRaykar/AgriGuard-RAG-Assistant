@@ -121,31 +121,31 @@ The response is returned and displayed in the chatbot interface.
 
 ### Frontend
 
-   #### 1. Core Library & Build Tool
+ #### 1. Core Library & Build Tool
 
 * React: The core UI library.
 * Vite: The build tool and development server.
 
-    #### 2. Dependencies
+ #### 2. Dependencies
 
 * Axios: Used for making HTTP requests to the FastAPI backend (e.g., querying the RAG pipeline and triggering document ingestion).
 
 * Lucide React: Provides modern, lightweight icons.
 
 * React Markdown: Used to render markdown responses from the LLM (which formats crop diagnoses with headers, lists, and bold text).
-  
-   #### 3. Styling
+
+ #### 3. Styling
    Vanilla CSS: Global styling and UI design are handled directly in index.css
 
 ### Backend
 
-  #### 1. Core API & Server:
+#### 1. Core API & Server:
 
 FastAPI: Web framework used for building the API endpoints (/ingest and /query).
 
 Uvicorn: ASGI server used to run the FastAPI application.
 
-  #### 2. Retrieval-Augmented Generation (RAG) Framework:
+#### 2. Retrieval-Augmented Generation (RAG) Framework:
    
 LangChain:
  (langchain, langchain-community, langchain-text-splitters, langchain-google-genai): Used to orchestrate the RAG pipeline, load PDFs, split text into chunks, and query the models.
@@ -239,9 +239,10 @@ AgriGuard-RAG-Assistant/
 
 ---
 
-## 🛠 Installation
 
-###  Clone Repository
+### Installation
+
+####  Clone Repository
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/AgriGuard-RAG-Assistant.git
