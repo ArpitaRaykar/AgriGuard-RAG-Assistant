@@ -169,18 +169,24 @@ The AI & RAG (Retrieval-Augmented Generation) pipeline is implemented in rag_pip
 
  #### 1. Document Ingestion & Processing
 Data Source: PDF documents (research papers, manuals, reports) stored in the data/pdf's/ directory.
+
 Loading: LangChain's DirectoryLoader and PyPDFLoader extract text page-by-page.
+
 Splitting: RecursiveCharacterTextSplitter splits documents into chunks of 1000 characters with an overlap of 200 characters to preserve context.
 
  #### 2. Embeddings & Vector Storage
 Embedding Model: all-MiniLM-L6-v2 (via Hugging Face SentenceTransformers) runs locally on the CPU to convert text chunks into vector embeddings.
+
 Vector Store: FAISS (Facebook AI Similarity Search). The generated embeddings are indexed and saved locally in the faiss_index/ directory for fast similarity search.
+
  #### 3. Retrieval & AI Generation
    
 * Retrieval: When a query is submitted, the FAISS vector store retrieves the top k = 5 most similar text chunks based on cosine similarity.
-AI Model (LLM): gemini-3.5-flash (via Google Generative AI API) is used to synthesize responses.
+* AI Model (LLM): gemini-3.5-flash (via Google Generative AI API) is used to synthesize responses.
 
-* Contextual Prompting: A custom system prompt directs the LLM to behave as an expert "Agricultural Disease Assistant." It requires the LLM to prioritize the retrieved context, incorporate conversation history, and format its response with specific sections:
+* Contextual Prompting: A custom system prompt directs the LLM to behave as an expert "Agricultural Disease Assistant.
+*  It requires the LLM to prioritize the retrieved context, incorporate conversation history, and format its response with specific sections:
+  
 * Crop
 * Disease/Pest
 * Symptoms
