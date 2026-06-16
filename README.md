@@ -39,7 +39,7 @@ Traditional chatbots rely only on pre-trained knowledge, which may be outdated o
 
 ---
 
-## 🧠 What is RAG?
+## What is RAG?
 
 Retrieval-Augmented Generation (RAG) is an AI architecture that combines:
 
@@ -133,9 +133,18 @@ The response is returned and displayed in the chatbot interface.
 
 ### AI & RAG
 
-* OpenAI API / Gemini API *(Update according to your implementation)*
-* LangChain *(if used)*
-* Vector Database *(FAISS / ChromaDB / Pinecone)*
+
+• Sentence Transformers (all-MiniLM-L6-v2)
+• ChromaDB
+• FlashRank
+
+Document Processing:
+• PyPDF
+
+Development Tools:
+• VS Code
+• Git
+• GitHub
 
 ---
 
@@ -231,9 +240,9 @@ The presentation video includes:
 
 ## 👨‍💻 Author
 
-**Name:** YOUR_NAME
+**Name:** ARPITA UTTAM KUMAR RAYKAR
 
-**Register Number:** YOUR_REG_NO
+**Register Number:** 25PG00013
 
 ---
 
