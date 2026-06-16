@@ -1,4 +1,4 @@
-# 🌾 AgriGuard-RAG Assistant
+#  AgriGuard-RAG Assistant
 
 AI-powered agricultural assistant using Retrieval-Augmented Generation (RAG) to provide accurate, context-aware farming and crop management insights.
 
@@ -121,19 +121,72 @@ The response is returned and displayed in the chatbot interface.
 
 ### Frontend
 
-* React.js
-* Vite
-* Axios
-* React Markdown
-* Lucide React
+   ## 1. Core Library & Build Tool
+
+* React: The core UI library.
+* Vite: The build tool and development server.
+
+   ## 2. Dependencies
+
+* Axios: Used for making HTTP requests to the FastAPI backend (e.g., querying the RAG pipeline and triggering document ingestion).
+
+* Lucide React: Provides modern, lightweight icons.
+
+* React Markdown: Used to render markdown responses from the LLM (which formats crop diagnoses with headers, lists, and bold text).
+  
+   ## 3. Styling
+Vanilla CSS: Global styling and UI design are handled directly in index.css
 
 ### Backend
 
-* Python / Flask / FastAPI *(Update according to your implementation)*
+## 1. Core API & Server:
 
+FastAPI: Web framework used for building the API endpoints (/ingest and /query).
+
+Uvicorn: ASGI server used to run the FastAPI application.
+
+## 2. Retrieval-Augmented Generation (RAG) Framework:
+   
+LangChain:
+ (langchain, langchain-community, langchain-text-splitters, langchain-google-genai): Used to orchestrate the RAG pipeline, load PDFs, split text into chunks, and query the models.
+
+## 3. Vector Database & Embeddings
+
+FAISS (CPU version): A local library for efficient similarity search and clustering of dense vectors, serving as the project's vector store.
+
+## 4. Language Model (LLM)
+
+Gemini 3.5 Flash (via langchain-google-genai): The LLM used to process the retrieved context and generate structured, context-aware answers.
+
+## 5. Utilities
+
+PyPDF: Used to parse agricultural PDF documents.
+
+python-dotenv: Manages configuration and secrets (like GEMINI_API_KEY) from the environment.
 ### AI & RAG
+The AI & RAG (Retrieval-Augmented Generation) pipeline is implemented in rag_pipeline.py using LangChain:
 
+ ## 1. Document Ingestion & Processing
+Data Source: PDF documents (research papers, manuals, reports) stored in the data/pdf's/ directory.
+Loading: LangChain's DirectoryLoader and PyPDFLoader extract text page-by-page.
+Splitting: RecursiveCharacterTextSplitter splits documents into chunks of 1000 characters with an overlap of 200 characters to preserve context.
 
+## 2. Embeddings & Vector Storage
+Embedding Model: all-MiniLM-L6-v2 (via Hugging Face SentenceTransformers) runs locally on the CPU to convert text chunks into vector embeddings.
+Vector Store: FAISS (Facebook AI Similarity Search). The generated embeddings are indexed and saved locally in the faiss_index/ directory for fast similarity search.
+## 3. Retrieval & AI Generation
+   
+* Retrieval: When a query is submitted, the FAISS vector store retrieves the top k = 5 most similar text chunks based on cosine similarity.
+AI Model (LLM): gemini-3.5-flash (via Google Generative AI API) is used to synthesize responses.
+
+* Contextual Prompting: A custom system prompt directs the LLM to behave as an expert "Agricultural Disease Assistant." It requires the LLM to prioritize the retrieved context, incorporate conversation history, and format its response with specific sections:
+* Crop
+* Disease/Pest
+* Symptoms
+* Causes
+* Prevention
+* Management/Treatment
+* Source (Document & Page Number)
 • Sentence Transformers (all-MiniLM-L6-v2)
 • ChromaDB
 • FlashRank
