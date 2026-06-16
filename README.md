@@ -264,7 +264,7 @@ npm run preview
 * How can I improve soil fertility naturally?
 * Which crop is suitable for black soil?
 * How do I control aphids in tomato plants?
-* What irrigation method is best for water conservation?
+  
 
 ---
 
@@ -305,6 +305,6 @@ This project is developed for educational and academic purposes.
 
 ---
 
-## ⭐ Conclusion
+##  Conclusion
 
 AgriGuard-RAG Assistant demonstrates the practical use of Retrieval-Augmented Generation in agriculture. By combining document retrieval with modern LLMs, the system delivers accurate, reliable, and context-aware agricultural guidance while allowing easy updates to the knowledge base without retraining the model.
