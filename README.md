@@ -4,7 +4,7 @@ AI-powered agricultural assistant using Retrieval-Augmented Generation (RAG) to 
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 AgriGuard-RAG Assistant is an intelligent agricultural chatbot that combines the power of Large Language Models (LLMs) with Retrieval-Augmented Generation (RAG) to provide reliable and domain-specific agricultural information.
 
@@ -12,7 +12,7 @@ The system retrieves relevant information from a custom agricultural knowledge b
 
 ---
 
-## 🎯 Problem Statement
+##  Problem Statement
 
 Farmers and agricultural enthusiasts often struggle to find accurate and up-to-date information regarding:
 
@@ -27,7 +27,7 @@ Traditional chatbots rely only on pre-trained knowledge, which may be outdated o
 
 ---
 
-## 🚀 Features
+##  Features
 
 * Interactive AI chatbot interface
 * Retrieval-Augmented Generation (RAG)
@@ -39,7 +39,7 @@ Traditional chatbots rely only on pre-trained knowledge, which may be outdated o
 
 ---
 
-## What is RAG?
+# What is RAG?
 
 Retrieval-Augmented Generation (RAG) is an AI architecture that combines:
 
@@ -58,7 +58,7 @@ Instead of relying solely on model training data, RAG first retrieves relevant i
 
 ---
 
-## ⚙️ System Architecture
+##  System Architecture
 
 ```text
 User Query
@@ -77,7 +77,7 @@ Retriever
 Relevant Documents
     │
     ▼
-LLM
+   LLM
     │
     ▼
 Generated Response
@@ -88,7 +88,7 @@ Frontend Display
 
 ---
 
-## 🔄 RAG Workflow
+##  RAG Workflow
 
 ### Step 1: User Query
 
@@ -117,11 +117,11 @@ The response is returned and displayed in the chatbot interface.
 
 ---
 
-## 💻 Technology Stack
+##  Technology Stack
 
 ### Frontend
 
-   ## 1. Core Library & Build Tool
+   #### 1. Core Library & Build Tool
 
 * React: The core UI library.
 * Vite: The build tool and development server.
