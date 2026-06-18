@@ -239,7 +239,7 @@ AgriGuard-RAG-Assistant/
 
 ---
 
-
+---
 ### Installation
 
 ####  Clone Repository
