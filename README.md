@@ -239,6 +239,8 @@ AgriGuard-RAG-Assistant/
 
 ---
 
+
+
 ---
 ### Installation
 
@@ -248,6 +250,7 @@ AgriGuard-RAG-Assistant/
 git clone https://github.com/YOUR_USERNAME/AgriGuard-RAG-Assistant.git
 cd AgriGuard-RAG-Assistant
 ```
+
 
 ### Install Dependencies
 
