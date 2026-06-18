@@ -236,28 +236,21 @@ AgriGuard-RAG-Assistant/
 ├── package.json
 ├── README.md
 └── .gitignore
-
----
-
-
-
----
-### Installation
-
-####  Clone Repository
-
-```bash
-git clone https://github.com/YOUR_USERNAME/AgriGuard-RAG-Assistant.git
-cd AgriGuard-RAG-Assistant
 ```
+### Clone Repository
+git clone https://github.com/ArpitaRaykar/AgriGuard-RAG-Assistant.git
+cd AgriGuard-RAG-Assistant
 
+```md
+## Version Control
 
-### Install Dependencies
+- GitHub: https://github.com/ArpitaRaykar/AgriGuard-RAG-Assistant
+
+####  Install Dependencies
 
 ```bash
 npm install
 ```
-
 ### Run Development Server
 
 ```bash
@@ -277,6 +270,8 @@ npm run preview
 ```
 
 ---
+### Access Application
+http://localhost:5173
 
 ## 💡 Sample Questions
 
