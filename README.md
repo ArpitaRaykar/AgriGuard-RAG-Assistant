@@ -58,7 +58,8 @@ Instead of relying solely on model training data, RAG first retrieves relevant i
 
 ---
 
-## System Prompt
+````markdown
+## 🧠 System Prompt
 
 AgriGuard-RAG Assistant uses a specialized system prompt to guide the Large Language Model (LLM) in generating accurate, context-aware, and document-grounded agricultural responses.
 
@@ -97,10 +98,13 @@ User Question:
 {question}
 
 Generate a professional, accurate, and context-grounded answer.
+"""
+```
 
 ### Why This System Prompt?
 
 The system prompt ensures that the chatbot behaves as a domain-specific agricultural expert rather than a general-purpose AI assistant. By prioritizing retrieved document content, the model produces reliable and context-grounded responses while minimizing hallucinations. This significantly improves the accuracy, trustworthiness, and practical usefulness of answers provided to farmers, researchers, and agricultural professionals.
+````
 
 ##  System Architecture
 
