@@ -57,8 +57,8 @@ Instead of relying solely on model training data, RAG first retrieves relevant i
 * No need for model retraining
 
 ---
-````markdown
-## 🧠 System Prompt
+
+## System Prompt
 
 AgriGuard-RAG Assistant uses a specialized system prompt to guide the Large Language Model (LLM) in generating accurate, context-aware, and document-grounded agricultural responses.
 
@@ -98,7 +98,6 @@ User Question:
 
 Generate a professional, accurate, and context-grounded answer.
 """
-```
 
 ### Why This System Prompt?
 
