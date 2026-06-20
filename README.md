@@ -359,7 +359,7 @@ The presentation video includes:
 
 ---
 
-## 📄 License
+## 📄 Licenses
 
 This project is developed for educational and academic purposes.
 
